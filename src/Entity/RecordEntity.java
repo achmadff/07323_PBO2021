@@ -8,7 +8,6 @@ public class RecordEntity {
     private int clusterNumber;
 
     public RecordEntity(String provinsi,int TingkatKematian,int JumlahKasus,int PotensiPenularan){
-        super();
         this.provinsi = provinsi;
         this.TingkatKematian = TingkatKematian;
         this.JumlahKasus = JumlahKasus;
