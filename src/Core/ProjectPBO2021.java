@@ -32,7 +32,7 @@ public class ProjectPBO2021 {
                     break;
                 case 4:
                     AllObjectController.clusterController.initializeClusterAndCentroid(3);
-                    System.out.println(AllObjectController.recordController.ViewDataRecord());
+                    System.out.println(AllObjectController.clusterController.viewDataCluster());
                     break;
             }
         } while (pil != 0);
