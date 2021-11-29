@@ -23,7 +23,7 @@ public class ClusterController implements ClusterControllerInterface {
             record = iterator.next();
             if(counter <= clusterNumber){
                 record.setClusterNumber(counter);
-                initializeCluster(clusterNumber, record);
+                initializeCluster(counter, record);
                 counter++;
             }else{
                 text+=""+record+"\n";
