@@ -58,6 +58,7 @@ public class ClusterController implements ClusterControllerInterface {
     public void initializeCluster(int clusterNumber, RecordEntity record) {
         ClusterEntity cluster = new ClusterEntity(record.getTingkatKematian()
         ,record.getJumlahKasus(),record.getPotensiPenularan(),clusterNumber);
+        AllObjectModel.modelCluster.getClusters().add(cluster);
         List<RecordEntity> clusterRecord = new ArrayList<RecordEntity>();
         
         clusterRecord.add(record);
