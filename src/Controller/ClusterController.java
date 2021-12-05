@@ -13,7 +13,7 @@ public class ClusterController implements ClusterControllerInterface {
     String text;
 
     @Override
-    public void initializeClusterAndCentroid(int clusterNumber) {
+    public void initiateClusterAndCentroid(int clusterNumber) {
         int counter = 1;
 
         Iterator<RecordEntity> iterator = AllObjectModel.modelRecord.getData().iterator();
@@ -23,7 +23,7 @@ public class ClusterController implements ClusterControllerInterface {
             record = iterator.next();
             if(counter <= clusterNumber){
                 record.setClusterNumber(counter);
-                initializeCluster(counter, record);
+                initiateCluster(counter, record);
                 counter++;
             }else{
                 text+=""+record+"\n";
@@ -55,7 +55,7 @@ public class ClusterController implements ClusterControllerInterface {
         }
     }
     @Override
-    public void initializeCluster(int clusterNumber, RecordEntity record) {
+    public void initiateCluster(int clusterNumber, RecordEntity record) {
         ClusterEntity cluster = new ClusterEntity(record.getTingkatKematian()
         ,record.getJumlahKasus(),record.getPotensiPenularan(),clusterNumber);
         AllObjectModel.modelCluster.getClusters().add(cluster);
@@ -76,7 +76,7 @@ public class ClusterController implements ClusterControllerInterface {
         
     }
     @Override
-    public String viewDataCluster() {
+    public String ViewDataCluster() {
         FinalCluster();
         return this.text;
     }
