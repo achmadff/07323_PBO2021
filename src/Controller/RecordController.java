@@ -19,10 +19,10 @@ public class RecordController implements RecordControllerInterface{
     @Override
     public String ViewDataRecord() {
         String text;
-        text = "Provinsi\tTingkat Kematian\tJumlah Kasus\tPotensi Penularan\n";
+        text = "Provinsi\tTingkat Kematian\tJumlah Kasus\t\tPotensi Penularan\n";
         for (int i = 0; i < AllObjectModel.modelRecord.getData().size(); i++) {
             text+= ""+ AllObjectModel.modelRecord.getData().get(i).getProvinsi()
-            +"\t\t"+AllObjectModel.modelRecord.getData().get(i).getTingkatKematian()
+            +"\t"+AllObjectModel.modelRecord.getData().get(i).getTingkatKematian()
             +"\t\t"+AllObjectModel.modelRecord.getData().get(i).getJumlahKasus()
             +"\t\t"+AllObjectModel.modelRecord.getData().get(i).getPotensiPenularan()+"\n";
         }
